@@ -1,0 +1,1 @@
+select count(*) as USERS from (SELECT age from user_info where (20 <= age and age <=29) and year(joined) = 2021) as ages
