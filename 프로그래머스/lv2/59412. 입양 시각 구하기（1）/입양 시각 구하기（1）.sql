@@ -1,0 +1,1 @@
+SELECT HOUR(datetime) as hour, count(*) as COUNT from ANIMAL_OUTS group by hour having hour>8 and hour<20 order by hour
