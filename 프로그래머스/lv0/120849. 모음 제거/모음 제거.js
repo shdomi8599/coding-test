@@ -1,5 +1,19 @@
 function solution(my_string) {
+    let answer =''
     let arr = ['a','e','i','o','u']
- const result=  my_string.split('').filter(x=>!arr.includes(x))
-return result.join('')
+    
+    for(let i=0; i < my_string.length; i++){
+        let isIncludes = false
+        
+        for(let j=0; j< arr.length; j++){
+            if(arr[j] === my_string[i]){
+                isIncludes = true
+                break
+            }
+        }
+        if(!isIncludes){
+            answer += my_string[i]
+        }
+    }
+    return answer
 }
